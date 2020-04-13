@@ -1,0 +1,8 @@
+# Gitignore for libmotionctl
+
+# VSCode
+.vscode/
+
+# Build output.
+[oO]ut/
+[bB]uild/
