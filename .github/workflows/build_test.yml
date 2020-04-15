@@ -24,10 +24,16 @@ jobs:
       with:
         submodules: true
 
+    # Create build directory for cmake
     - name: Setup
       run: mkdir ./build
 
-    # Runs a set of commands using the runners shell
+    # Generate makefile with cmake
     - name: Generate Build Scripts
       run: cmake -DBUILD_TESTS=ON ..
+      working-directory: ./build
+
+    # Build code with gcc
+    - name: Build
+      run: cmake --build .
       working-directory: ./build
