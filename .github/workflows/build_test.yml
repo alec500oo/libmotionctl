@@ -24,8 +24,10 @@ jobs:
       with:
         submodules: true
 
+    - name: Setup
+      run: mkdir ./build
+
     # Runs a set of commands using the runners shell
     - name: Generate Build Scripts
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      run: cmake -DBUILD_TESTS=ON ..
+      working-directory: ./build
