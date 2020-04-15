@@ -2,7 +2,7 @@
 
 # add the source files for the library
 set(libmotionctl_srcs
-    pid.c
+    motion_ctl.c
 )
 
 # Create motion control library. For now, I would like to only make static
